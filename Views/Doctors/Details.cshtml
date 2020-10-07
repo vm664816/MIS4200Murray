@@ -1,0 +1,42 @@
+﻿@model MIS4200Murray.Models.Doctor
+
+@{
+    ViewBag.Title = "Doctors Details";
+}
+
+<h2>Doctors Details</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Patient Full Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient.firstName)
+        </dd>
+
+        <dt>
+            Doctor First Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctorFirstName)
+        </dd>
+
+        <dt>
+            Doctor Last Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctorLastName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.doctorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

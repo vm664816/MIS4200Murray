@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MIS4200Murray.Models.Doctor>
+
+@{
+    ViewBag.Title = "Doctors Index";
+}
+
+<h2>Doctors Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Patient Full Name
+        </th>
+        <th>
+            Doctor First Name
+        </th>
+        <th>
+            Doctor Last Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.doctorLastName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.doctorID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.doctorID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.doctorID })
+        </td>
+    </tr>
+}
+
+</table>

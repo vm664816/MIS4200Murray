@@ -1,0 +1,34 @@
+﻿@model MIS4200Murray.Models.Payment
+
+@{
+    ViewBag.Title = "Payment Details";
+}
+
+<h2>Payment Details</h2>
+
+<div>
+    <h4>Payment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Payment Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentDate)
+        </dd>
+
+        <dt>
+            Payment Amount
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.paymentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Vincent Murray</h1>
+    <p class="lead">Student at Ohio University</p>
+    <p><a href="https://www.ohio.edu/" class="btn btn-default btn-sm">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>MIS & Business Analytics Major</h2>
+        <p>
+            Coming into college I had not the slightest clue what I wanted to major in.
+            After about a year of exploring my options I decided that management information systems was the route for me.
+            And to compliment that major, business analytics was added.
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Sample Application Links
+                    <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li>@Html.ActionLink("Patients", "Index", "Patients")</li>
+            <li>@Html.ActionLink("Doctors", "Index", "Doctors")</li>
+            <li>@Html.ActionLink("Appointments", "Index", "Appointments")</li>
+            <li>@Html.ActionLink("Payments", "Index", "Payments")</li>
+        </ul>
+    </div>
+<p><a class="btn btn-link" href="https://business.ohio.edu/academics/undergrad-majors/management-information-systems/">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>The Ralph and Luci Schey Sales Centre</h2>
+        <p>In addition to my two majors, I am also pursing a certificate in sales. The Schey is the largest student ran organization on campus, as well as one of the top sales programs in the country.</p>
+        <p><a class="btn btn-link" href="https://business.ohio.edu/sales">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Summer 2020 Internship</h2>
+        <p>Through the Schey Sales Centre, I was able to find a sales internship over the summer. The internship was with FoxHire (EOR Service), and was one of the best learning experiences of my life.</p>
+        <p><a class="btn btn-link" href="https://www.foxhire.com/">Learn more &raquo;</a></p>
+    </div>
+</div>

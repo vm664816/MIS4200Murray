@@ -1,0 +1,39 @@
+﻿@model IEnumerable<MIS4200Murray.Models.Payment>
+
+@{
+    ViewBag.Title = "Payment Index";
+}
+
+<h2>Payment Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table-hover">
+    <tr>
+        <th>
+            Payment Date
+        </th>
+        <th>
+            Payment Amount
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.paymentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.paymentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.paymentID })
+        </td>
+    </tr>
+}
+
+</table>
